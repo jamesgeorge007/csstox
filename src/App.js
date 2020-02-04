@@ -20,13 +20,10 @@ function App() {
       </div>
       <div>
         <p>
-          This tool instantly converts ...
+          Easily convert CSS text to React Native objects
         </p>
         <p>
-          For eg something ...
-        </p>
-        <p>
-          &copy; 2020
+          &copy; 2020 James George
         </p>
       </div>
       <div>
