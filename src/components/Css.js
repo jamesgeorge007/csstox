@@ -7,7 +7,6 @@ import { AppContext } from '../context/AppContext';
 
 const Css = () => {
   const { value, setValue } = useContext(AppContext);
-  const [content, setContent] = useState("");
 
   const objectify = (cssText) => {
     const root = postcss.parse(cssText);

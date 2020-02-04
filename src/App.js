@@ -6,7 +6,7 @@ import Css from './components/Css';
 import RN from './components/RN';
 
 function App() {
-  const [value, setValue] = useState("Initial Value");
+  const [value, setValue] = useState("");
 
   return (
     <AppContext.Provider
