@@ -7,6 +7,7 @@ import RN from './components/RN';
 
 function App() {
   const [value, setValue] = useState("");
+  const [type, setType] = useState("JSS");
 
   return (
     <AppContext.Provider
@@ -15,12 +16,18 @@ function App() {
     <header>
     <div className="intro">
       <div className="title">
-        <h1>CSS-to-RN</h1>
-        <h2>Convert CSS to RN</h2>
+        <h1>
+        CSS to &nbsp;
+        <select className="select-css" onChange={(e) => setType(e.target.value)}>
+          <option>JSS</option>
+          <option>React Native</option>
+        </select>
+        </h1>
+        <br />
       </div>
       <div>
         <p>
-          Easily convert CSS text to React Native objects
+          Easily convert CSS text to {type} objects
         </p>
         <p>
           &copy; 2020 James George
@@ -34,7 +41,7 @@ function App() {
     <tr>
       <th style={{width: '45%'}}>CSS</th>
       <th style={{width: '10%', fontSize: '22px'}}>&#8594;</th>
-      <th style={{width: '45%'}}>React Native</th>
+      <th style={{width: '45%'}}>{type}</th>
     </tr>
   </table>
   <table>
