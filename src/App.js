@@ -12,10 +12,11 @@ function App() {
   const initialState = toRN(rawSnippet);
   const [state, setState] = useState(initialState);
   const [type, setType] = useState("JSS");
+  const [currentSnippet, setSnippet] = useState(rawSnippet);
 
   return (
     <AppContext.Provider
-      value={{ state, setState, rawSnippet, type, setType }}
+      value={{ state, setState, rawSnippet, currentSnippet, setSnippet, type, setType }}
     >
     <header>
     <div className="intro">

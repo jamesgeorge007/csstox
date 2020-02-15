@@ -4,10 +4,11 @@ import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
 const Css = () => {
-  const { state, setState, rawSnippet, type } = useContext(AppContext);
+  const { state, setState, rawSnippet, setSnippet, type } = useContext(AppContext);
 
   const objectify = (cssText) => {
     const input = cssText ? cssText : rawSnippet;
+    setSnippet(input);
     if (type === 'JSS') {
       setState(toJSS(input));
     } else {
