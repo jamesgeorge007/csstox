@@ -11,7 +11,7 @@ function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
   const initialState = toRN(rawSnippet);
   const [state, setState] = useState(initialState);
-  const [type, setType] = useState("React Native");
+  const [type, setType] = useState("JSS");
 
   return (
     <AppContext.Provider
