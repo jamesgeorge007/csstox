@@ -1,13 +1,18 @@
 import React, { useContext, useState } from 'react';
 
 import { AppContext } from '../context/AppContext';
-import { toRN } from '../helpers/transform';
+import { toJSS, toRN } from '../helpers/transform';
 
 const Css = () => {
-  const { state, setState, rawSnippet } = useContext(AppContext);
+  const { state, setState, rawSnippet, type } = useContext(AppContext);
 
   const objectify = (cssText) => {
-    setState(toRN(cssText ? cssText : rawSnippet));
+    const input = cssText ? cssText : rawSnippet;
+    if (type === 'JSS') {
+      setState(toJSS(input));
+    } else {
+      setState(toRN(input));
+    }
   }
 
   return (

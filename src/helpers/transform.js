@@ -10,3 +10,9 @@ export const toRN = (cssText) => {
   });
   return transform(candidate);
 };
+
+export const toJSS = (cssText) => {
+  const root = postcss.parse(cssText);
+  const output = postcssJs.objectify(root);
+  return output;
+};

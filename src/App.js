@@ -14,7 +14,7 @@ function App() {
 
   return (
     <AppContext.Provider
-      value={{ state, setState, rawSnippet }}
+      value={{ state, setState, rawSnippet, type }}
     >
     <header>
     <div className="intro">
