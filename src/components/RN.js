@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const RN = () => {
-  const { value } = useContext(AppContext);
+  const { state } = useContext(AppContext);
   return (
-    <textarea readOnly id="output" value={JSON.stringify(value, null, 2)} />
+    <textarea readOnly id="output" value={JSON.stringify(state, null, 2)} />
   );
 };
 

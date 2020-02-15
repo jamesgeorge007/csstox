@@ -4,10 +4,10 @@ import { AppContext } from '../context/AppContext';
 import { toRN } from '../helpers/transform';
 
 const Css = () => {
-  const { value, setValue,rawSnippet } = useContext(AppContext);
+  const { state, setState, rawSnippet } = useContext(AppContext);
 
   const objectify = (cssText) => {
-    setValue(toRN(cssText ? cssText : rawSnippet));
+    setState(toRN(cssText ? cssText : rawSnippet));
   }
 
   return (

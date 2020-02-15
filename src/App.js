@@ -9,12 +9,12 @@ import RN from './components/RN';
 function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
   const initialState = toRN(rawSnippet);
-  const [value, setValue] = useState(initialState);
+  const [state, setState] = useState(initialState);
   const [type, setType] = useState("JSS");
 
   return (
     <AppContext.Provider
-      value={{ value, setValue, rawSnippet }}
+      value={{ state, setState, rawSnippet }}
     >
     <header>
     <div className="intro">
