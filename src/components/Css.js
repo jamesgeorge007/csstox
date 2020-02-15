@@ -12,7 +12,7 @@ const Css = () => {
 
   return (
     <>
-      <textarea id="input" placeholder={value} onChange={(e) => objectify(e.target.value)}/>
+      <textarea id="input" placeholder={JSON.stringify(value, null, 2)} onChange={(e) => objectify(e.target.value)}/>
     </>
 );
 
