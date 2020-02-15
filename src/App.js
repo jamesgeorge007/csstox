@@ -7,13 +7,14 @@ import Css from './components/Css';
 import RN from './components/RN';
 
 function App() {
-  const initialState = toRN("font-size: 18px;\nline-height: 24px;\ncolor: red;");
+  const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
+  const initialState = toRN(rawSnippet);
   const [value, setValue] = useState(initialState);
   const [type, setType] = useState("JSS");
 
   return (
     <AppContext.Provider
-      value={{ value, setValue }}
+      value={{ value, setValue, rawSnippet }}
     >
     <header>
     <div className="intro">

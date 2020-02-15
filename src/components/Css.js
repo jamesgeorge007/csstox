@@ -4,15 +4,15 @@ import { AppContext } from '../context/AppContext';
 import { toRN } from '../helpers/transform';
 
 const Css = () => {
-  const { value, setValue } = useContext(AppContext);
+  const { value, setValue,rawSnippet } = useContext(AppContext);
 
   const objectify = (cssText) => {
-    setValue(toRN(cssText));
+    setValue(toRN(cssText ? cssText : rawSnippet));
   }
 
   return (
     <>
-      <textarea id="input" placeholder={JSON.stringify(value, null, 2)} onChange={(e) => objectify(e.target.value)}/>
+      <textarea id="input" placeholder={rawSnippet} onChange={(e) => objectify(e.target.value)}/>
     </>
 );
 
