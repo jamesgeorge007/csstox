@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { AppContext } from './context/AppContext';
 
+import { toRN } from './helpers/transform';
 import './assets/css/styles.css';
 import Css from './components/Css';
 import RN from './components/RN';
 
 function App() {
-  const [value, setValue] = useState("");
+  const initialState = toRN("font-size: 18px;\nline-height: 24px;\ncolor: red;");
+  const [value, setValue] = useState(initialState);
   const [type, setType] = useState("JSS");
 
   return (
