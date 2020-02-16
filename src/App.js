@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AppContext } from './context/AppContext';
 
-import { toRN } from './helpers/transform';
+import { toJSS } from './helpers/transform';
 import './assets/css/styles.css';
 import Css from './components/Css';
 import RN from './components/RN';
@@ -9,7 +9,7 @@ import Select from './components/Select';
 
 function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
-  const initialState = toRN(rawSnippet);
+  const initialState = toJSS(rawSnippet);
   const [state, setState] = useState(initialState);
   const [type, setType] = useState("JSS");
   const [currentSnippet, setSnippet] = useState(rawSnippet);
