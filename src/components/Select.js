@@ -17,8 +17,8 @@ const Select = () => {
 
   return (
     <select className="select-css" onChange={(e) => objectify(e.target.value)}>
-      <option>JSS</option>
       <option>React Native</option>
+      <option>JSS</option>
     </select>
   );
 };
