@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../assets/css/table_layout.css';
 import Css from './Css';
-import RN from './RN';
+import Target from './Target';
 
 const Transform = () => {
   return (
@@ -12,7 +12,7 @@ const Transform = () => {
           <Css />
         </td>
         <td style={{width: '50%'}}>
-          <RN />
+          <Target />
         </td>
       </tr>
     </table>
