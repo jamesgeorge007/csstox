@@ -18,7 +18,7 @@ const Header = () => {
         </div>
         <div>
           <p>
-            Easily convert CSS text to {type} objects
+            Easily convert CSS text to {type} stylesheet objects.
           </p>
           <p>
             &copy; 2020 <a href="https://github.com/jamesgeorge007" target="_blank"> James George </a>
