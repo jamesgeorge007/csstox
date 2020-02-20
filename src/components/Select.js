@@ -1,10 +1,10 @@
-import React, {useContext, useState } from 'react';
+import React, {useContext } from 'react';
 
 import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
 const Select = () => {
-  const { state, setState, currentSnippet, setType } = useContext(AppContext);
+  const { setState, currentSnippet, setType } = useContext(AppContext);
 
   const objectify = (type) => {
     setType(type);

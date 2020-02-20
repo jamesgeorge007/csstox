@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
 const Css = () => {
-  const { state, setState, rawSnippet, setSnippet, type } = useContext(AppContext);
+  const { setState, rawSnippet, setSnippet, type } = useContext(AppContext);
 
   const objectify = (cssText) => {
     const input = cssText ? cssText : rawSnippet;
