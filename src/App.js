@@ -5,8 +5,7 @@ import { toRN } from './helpers/transform';
 import './assets/css/styles.css';
 import Header from './components/Header';
 import Title from './components/Title';
-import Css from './components/Css';
-import RN from './components/RN';
+import Transform from './components/Transform';
 
 function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
@@ -21,16 +20,7 @@ function App() {
     >
     <Header />
     <Title />
-    <table>
-      <tr>
-        <td style={{width: '50%'}}>
-          <Css />
-        </td>
-        <td style={{width: '50%'}}>
-          <RN />
-        </td>
-      </tr>
-    </table>
+    <Transform />
 
     <footer>
       &copy; 2020 James George
