@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import '../assets/css/textarea.css';
+import '../assets/css/target.scss';
 import { AppContext } from '../context/AppContext';
 
 const Target = () => {

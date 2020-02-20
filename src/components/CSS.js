@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import '../assets/css/textarea.css';
+import '../assets/css/source.scss';
 import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
