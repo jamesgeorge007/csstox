@@ -3,9 +3,9 @@ import { AppContext } from './context/AppContext';
 
 import { toRN } from './helpers/transform';
 import './assets/css/styles.css';
+import Header from './components/Header';
 import Css from './components/Css';
 import RN from './components/RN';
-import Select from './components/Select';
 
 function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
@@ -18,27 +18,7 @@ function App() {
     <AppContext.Provider
       value={{ state, setState, rawSnippet, currentSnippet, setSnippet, type, setType }}
     >
-    <header>
-    <div className="intro">
-      <div className="title">
-        <h1>
-        CSS to &nbsp;
-        <Select />
-        </h1>
-        <br />
-      </div>
-      <div>
-        <p>
-          Easily convert CSS text to {type} objects
-        </p>
-        <p>
-          &copy; 2020 James George
-        </p>
-      </div>
-      <div>
-      </div>
-    </div>
-  </header>
+    <Header />
   <table>
     <tr>
       <th style={{width: '45%'}}>CSS</th>
