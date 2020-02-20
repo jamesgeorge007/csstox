@@ -21,7 +21,7 @@ const Header = () => {
             Easily convert CSS text to {type} objects
           </p>
           <p>
-            &copy; 2020 James George
+            &copy; 2020 <a href="https://github.com/jamesgeorge007" target="_blank"> James George </a>
           </p>
         </div>
       </div>

@@ -6,7 +6,6 @@ import './assets/css/global.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import Transform from './components/Transform';
-import Footer from './components/Footer';
 
 function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
@@ -23,7 +22,6 @@ function App() {
         <Header />
         <Title />
         <Transform />
-        <Footer />
       </div>
     </AppContext.Provider>
   );
