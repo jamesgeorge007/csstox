@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../assets/css/table_layout.css';
 import Css from './Css';
 import RN from './RN';
 

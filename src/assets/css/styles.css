@@ -11,30 +11,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	font: 14px/1.25em sans-serif;
 }
 
-table {
-	width: 100%;
-	table-layout: fixed;
-}
-
-th {
-	padding: 15px;
-	background: #375EAB;
-	text-align: center;
-	color: #FFF;
-	font-size: 20px;
-}
-
-th label {
-	margin-left: 1em;
-	font-size: 14px;
-	cursor: pointer;
-}
-
-td {
-	width: 50%;
-	vertical-align: top;
-}
-
 #input,
 #output {
 	-webkit-box-sizing: border-box;

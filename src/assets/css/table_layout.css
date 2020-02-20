@@ -1,0 +1,17 @@
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+th {
+	padding: 15px;
+	background: #375EAB;
+	text-align: center;
+	color: #FFF;
+	font-size: 20px;
+}
+
+td {
+	width: 50%;
+	vertical-align: top;
+}
