@@ -6,6 +6,7 @@ import './assets/css/styles.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import Transform from './components/Transform';
+import Footer from './components/Footer';
 
 function App() {
   const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
@@ -21,10 +22,7 @@ function App() {
     <Header />
     <Title />
     <Transform />
-
-    <footer>
-      &copy; 2020 James George
-    </footer>
+    <Footer />
     </AppContext.Provider>
   );
 }
