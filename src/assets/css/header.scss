@@ -24,9 +24,9 @@ p {
 @media (max-width: 800px) {
 	.header-wrapper {
 		flex-direction: column;
-	}
 
-	.header-wrapper > div {
-		width: 100%;
+		div {
+			width: 100%;
+		}
 	}
 }
