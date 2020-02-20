@@ -8,8 +8,8 @@ const Header = () => {
   const { type } = useContext(AppContext);
   return (
     <header>
-      <div className="intro">
-        <div className="title">
+      <div className="header-wrapper">
+        <div>
           <h1>
             CSS to &nbsp;
             <Select />

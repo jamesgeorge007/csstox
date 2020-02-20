@@ -2,20 +2,31 @@ header {
 	padding: 20px;
 }
 
-.intro {
+.header-wrapper {
 	display: flex;
 }
 
-.intro > div {
+.header-wrapper > div {
 	width: 50%;
 }
 
+h1 {
+	font-size: 34px;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
+p {
+	margin-top: 20px;
+	line-height: 1.5em;
+}
+
 @media (max-width: 800px) {
-	.intro {
+	.header-wrapper {
 		flex-direction: column;
 	}
 
-	.intro > div {
+	.header-wrapper > div {
 		width: 100%;
 	}
 }
