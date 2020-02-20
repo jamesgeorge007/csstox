@@ -2,17 +2,15 @@ import postcss from 'postcss';
 import postcssJs from 'postcss-js';
 import transform from 'css-to-react-native';
 
-export const toRN = (cssText) => {
-  const root = postcss.parse(cssText);
-  const output = postcssJs.objectify(root);
-  const candidate = Object.keys(output).map((rules) => {
-    return [rules, output[rules]];
-  });
-  return transform(candidate);
-};
-
 export const toJSS = (cssText) => {
   const root = postcss.parse(cssText);
   const output = postcssJs.objectify(root);
   return output;
+};
+
+export const toRN = (cssText) => {
+  const candidate = Object.keys(toJSS(cssText)).map((rules) => {
+    return [rules, output[rules]];
+  });
+  return transform(candidate);
 };
