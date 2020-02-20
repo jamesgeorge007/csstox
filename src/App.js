@@ -19,10 +19,10 @@ function App() {
     <AppContext.Provider
       value={{ state, setState, rawSnippet, currentSnippet, setSnippet, type, setType }}
     >
-    <Header />
-    <Title />
-    <Transform />
-    <Footer />
+      <Header />
+      <Title />
+      <Transform />
+      <Footer />
     </AppContext.Provider>
   );
 }
