@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AppContext } from './context/AppContext';
 
 import { toRN } from './helpers/transform';
-import './assets/css/styles.css';
+import './assets/css/global.css';
 import Header from './components/Header';
 import Title from './components/Title';
 import Transform from './components/Transform';
