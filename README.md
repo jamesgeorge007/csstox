@@ -8,8 +8,9 @@
 
 Please try it out [here](https://csstox.surge.sh/)
 
-## The Internals
+## Behind the hoods
 
 - Built on top of React.js
 - Consumes the Hooks API
 - Makes use of the Context API to manage global state 
+- SCSS is used as the CSS pre-processor 
