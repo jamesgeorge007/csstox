@@ -1,7 +1,4 @@
-table {
-	width: 100%;
-	table-layout: fixed;
-}
+@import "table_layout";
 
 th {
 	padding: 15px;
@@ -9,9 +6,4 @@ th {
 	text-align: center;
 	color: #FFF;
 	font-size: 20px;
-}
-
-td {
-	width: 50%;
-	vertical-align: top;
 }

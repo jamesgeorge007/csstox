@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import '../assets/css/table_layout.css';
+import '../assets/css/title.scss';
 import { AppContext } from '../context/AppContext';
 
 const Title = () => {

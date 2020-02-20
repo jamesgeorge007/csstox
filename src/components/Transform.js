@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../assets/css/table_layout.css';
+import '../assets/css/transform.scss';
 import CSS from './CSS';
 import Target from './Target';
 
