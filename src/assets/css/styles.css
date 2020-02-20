@@ -11,15 +11,6 @@ body {
 	font: 14px/1.25em sans-serif;
 }
 
-code {
-	font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
-	padding: 0 3px;
-}
-
-header {
-	padding: 20px;
-}
-
 h1 {
 	font-size: 34px;
 	font-weight: bold;
@@ -100,27 +91,4 @@ footer {
 	text-align: center;
 	padding: 25px 0 50px;
 	line-height: 2em;
-}
-
-.clr-red {
-	color: #CC0000;
-}
-.faulty-line {
-	color: #C00;
-	background: #FDD;
-	font-weight: bold
-}
-.json-go-faulty-char  {
-	border: 1px solid purple;
-}
-
-.copy {
-	font-size: 14px;
-    padding: 5px;
-    background: #80808099;
-	border-radius: 5px;
-	cursor: pointer;
-}
-.copy:hover {
-	background: #808080cf;
 }
