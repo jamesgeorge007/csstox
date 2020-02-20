@@ -9,5 +9,7 @@ export const toJSS = (cssText) => {
 };
 
 export const toRN = (cssText) => {
-  return Object.keys(toJSS(cssText)).map((rules) => [rules, output[rules]]);
+  const output = toJSS(cssText);
+  const result = Object.keys(output).map((rules) => [rules, output[rules]]);
+  return transform(result);
 };
