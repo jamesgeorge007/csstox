@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 
+import '../assets/css/header.css';
 import { AppContext } from '../context/AppContext';
 import Select from './Select';
 

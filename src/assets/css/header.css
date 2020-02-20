@@ -1,0 +1,17 @@
+.intro {
+	display: flex;
+}
+
+.intro > div {
+	width: 50%;
+}
+
+@media (max-width: 800px) {
+	.intro {
+		flex-direction: column;
+	}
+
+	.intro > div {
+		width: 100%;
+	}
+}

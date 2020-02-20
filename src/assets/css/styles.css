@@ -20,14 +20,6 @@ header {
 	padding: 20px;
 }
 
-.intro {
-	display: flex;
-}
-
-.intro > div {
-	width: 50%;
-}
-
 h1 {
 	font-size: 34px;
 	font-weight: bold;
@@ -177,20 +169,4 @@ footer {
 }
 .copy:hover {
 	background: #808080cf;
-}
-
-@media (max-width: 800px) {
-	.intro {
-		flex-direction: column;
-	}
-
-	.intro > div {
-		width: 100%;
-	}
-
-	#brand {
-		float: none;
-		margin: 20px auto;
-		display: block;
-	}
 }
