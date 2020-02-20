@@ -1,5 +1,6 @@
 import React, {useContext } from 'react';
 
+import '../assets/css/select.css';
 import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
