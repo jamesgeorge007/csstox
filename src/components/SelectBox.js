@@ -4,7 +4,7 @@ import '../assets/css/select.css';
 import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
-const Select = () => {
+const SelectBox = () => {
   const { setState, currentSnippet, setType } = useContext(AppContext);
 
   const objectify = (type) => {
@@ -17,11 +17,11 @@ const Select = () => {
   }
 
   return (
-    <select className="select-css" onChange={(e) => objectify(e.target.value)}>
+    <select className="select" onChange={(e) => objectify(e.target.value)}>
       <option>React Native</option>
       <option>JSS</option>
     </select>
   );
 };
 
-export default Select;
+export default SelectBox;

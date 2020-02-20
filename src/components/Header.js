@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import '../assets/css/header.css';
 import { AppContext } from '../context/AppContext';
-import Select from './Select';
+import SelectBox from './SelectBox';
 
 const Header = () => {
   const { type } = useContext(AppContext);
@@ -12,7 +12,7 @@ const Header = () => {
         <div>
           <h1>
             CSS to &nbsp;
-            <Select />
+            <SelectBox />
           </h1>
         <br />
         </div>
