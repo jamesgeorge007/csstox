@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import '../assets/css/header.css';
+import '../assets/css/header.scss';
 import { AppContext } from '../context/AppContext';
 import SelectBox from './SelectBox';
 

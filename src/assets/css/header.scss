@@ -4,10 +4,10 @@ header {
 
 .header-wrapper {
 	display: flex;
-}
 
-.header-wrapper > div {
-	width: 50%;
+	div {
+		width: 50%;
+	}
 }
 
 h1 {
