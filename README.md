@@ -7,3 +7,9 @@
 ## Demo
 
 Please try it out [here](https://csstox.surge.sh/)
+
+## The Internals
+
+- Built on top of React.js
+- Consumes the Hooks API
+- Makes use of the Context API to manage global state 
