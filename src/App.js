@@ -4,6 +4,7 @@ import { AppContext } from './context/AppContext';
 import { toRN } from './helpers/transform';
 import './assets/css/styles.css';
 import Header from './components/Header';
+import Title from './components/Title';
 import Css from './components/Css';
 import RN from './components/RN';
 
@@ -19,13 +20,7 @@ function App() {
       value={{ state, setState, rawSnippet, currentSnippet, setSnippet, type, setType }}
     >
     <Header />
-    <table>
-      <tr>
-        <th style={{width: '45%'}}>CSS</th>
-        <th style={{width: '10%', fontSize: '22px'}}>&#8594;</th>
-        <th style={{width: '45%'}}>{type}</th>
-      </tr>
-    </table>
+    <Title />
     <table>
       <tr>
         <td style={{width: '50%'}}>
