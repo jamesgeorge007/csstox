@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import { toJSS, toRN } from '../helpers/transform';
 
-const Css = () => {
+const CSS = () => {
   const { setState, rawSnippet, setSnippet, type } = useContext(AppContext);
 
   const objectify = (cssText) => {
@@ -24,4 +24,4 @@ const Css = () => {
 
 };
 
-export default Css;
+export default CSS;

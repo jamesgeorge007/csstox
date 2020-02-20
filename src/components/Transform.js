@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../assets/css/table_layout.css';
-import Css from './Css';
+import CSS from './CSS';
 import Target from './Target';
 
 const Transform = () => {
@@ -9,7 +9,7 @@ const Transform = () => {
     <table>
       <tr>
         <td style={{width: '50%'}}>
-          <Css />
+          <CSS />
         </td>
         <td style={{width: '50%'}}>
           <Target />
