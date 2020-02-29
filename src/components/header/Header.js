@@ -1,11 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import '../assets/css/header.scss';
-import { AppContext } from '../context/AppContext';
-import SelectBox from './SelectBox';
+import './header.scss';
+import SelectBox from '../select-box/SelectBox';
+import { useStore } from "effector-react";
+import { store } from '../../store';
 
 const Header = () => {
-  const { type } = useContext(AppContext);
+  const { outputType } = useStore(store);
+
   return (
     <header>
       <div className="header-wrapper">
@@ -18,7 +20,7 @@ const Header = () => {
         </div>
         <div>
           <p>
-            Easily convert CSS text to {type} stylesheet objects.
+            Easily convert CSS text to {outputType} stylesheet objects.
           </p>
           <p>
             &copy; 2020 <a href="https://github.com/jamesgeorge007" target="_blank" rel="noopener noreferrer"> James George </a>
@@ -27,6 +29,6 @@ const Header = () => {
       </div>
   </header>
 );
-}
+};
 
 export default Header;

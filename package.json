@@ -7,6 +7,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "css-to-react-native": "^3.0.0",
+    "effector": "^20.12.1",
+    "effector-react": "^20.6.1",
     "node-sass": "^4.13.1",
     "postcss": "^7.0.26",
     "postcss-js": "^2.0.3",
