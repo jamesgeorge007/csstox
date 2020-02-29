@@ -3,16 +3,16 @@ import postcssJs from 'postcss-js';
 import transform from 'css-to-react-native';
 
 export const toJSSObject = (cssText) => {
-  try {
     const root = postcss.parse(cssText);
     return postcssJs.objectify(root);
-  } catch (e) {
-    return 'Error translating CSS';
-  }
 };
 
 export const toJSS = (cssText) => {
+  try {
     return JSON.stringify(toJSSObject(cssText), null, 2)
+  } catch (e) {
+    return 'Error translating CSS';
+  }
 };
 
 export const toRN = (cssText) => {
