@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './transform.scss';
 import CodeEditor from '../code-editor/CodeEditor';
-import { useStore } from "effector-react";
-import { store } from '../../store';
-import { changeInput } from "../../events";
+
+import { Context } from "../../App";
 
 const Transform = () => {
-  const { inputCss, outputCss } = useStore(store);
+
+  const { inputCss, outputCss, inputCssChanged } = useContext(Context);
+
   return (
     <table>
       <tbody>
@@ -16,7 +17,7 @@ const Transform = () => {
             <CodeEditor
                 placeholder={ inputCss }
                 initialValue={ '' }
-                valueChanged={ changeInput }
+                valueChanged={ inputCssChanged }
                 readOnly={false}
                 type={ 'input' }
             />
@@ -24,7 +25,7 @@ const Transform = () => {
           <td style={{width: '50%'}}>
             <CodeEditor
                 type={ 'output' }
-                initialValue={ JSON.stringify(outputCss, null, 2) }
+                initialValue={ outputCss }
                 readOnly={true}
             />
           </td>

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import './header.scss';
 import SelectBox from '../select-box/SelectBox';
-import { useStore } from "effector-react";
-import { store } from '../../store';
+import { Context } from '../../App';
 
 const Header = () => {
-  const { outputType } = useStore(store);
+  const { outputType } = useContext(Context);
 
   return (
     <header>

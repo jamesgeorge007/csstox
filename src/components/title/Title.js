@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import './title.scss';
-import { useStore } from "effector-react";
-import { store } from '../../store';
+import {Context} from "../../App";
 
 const Title = () => {
-    const { outputType } = useStore(store);
+    const { outputType } = useContext(Context);
   return (
     <table>
         <tbody>
