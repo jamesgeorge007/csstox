@@ -6,7 +6,7 @@ const CodeEditor = (props) => {
     const { placeholder, initialValue, valueChanged, readOnly, type } = props;
     const [value, setValue] = useState(initialValue);
 
-    useEffect(() => { setValue(initialValue); }, [initialValue]);
+    useEffect(() => setValue(initialValue), [initialValue]);
 
     const handleChange = (value) => {
         setValue(value);
