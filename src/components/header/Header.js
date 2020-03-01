@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 
 import './header.scss';
 import SelectBox from '../select-box/SelectBox';
