@@ -1,30 +1,51 @@
-import React, { useState } from 'react';
-import { AppContext } from './context/AppContext';
+import React, { useState, useEffect } from 'react';
 
-import { toRN } from './helpers/transform';
 import './assets/css/global.css';
-import Header from './components/Header';
-import Title from './components/Title';
-import Transform from './components/Transform';
+
+import Header from './components/header/Header';
+import Transform from "./components/transform/Transform";
+import Title from "./components/title/Title";
+import { toJSS, toRN } from "./helpers/transform";
+
+const initialInputCss = `font-size: 18px;\nline-height: 24px;\ncolor: red;`;
+
+export const Context = React.createContext(null);
 
 function App() {
-  const rawSnippet = "font-size: 18px;\nline-height: 24px;\ncolor: red;";
-  const initialState = toRN(rawSnippet);
-  const [state, setState] = useState(initialState);
-  const [type, setType] = useState("React Native");
-  const [currentSnippet, setSnippet] = useState(rawSnippet);
+    const [outputType, setOutputType] = useState('React Native');
+    const [inputCss, setInputCss] = useState(initialInputCss);
+    const [outputCss, setOutputCss] = useState('');
 
-  return (
-    <AppContext.Provider
-      value={{ state, setState, rawSnippet, currentSnippet, setSnippet, type, setType }}
-    >
-      <div className="wrapper">
-        <Header />
-        <Title />
-        <Transform />
-      </div>
-    </AppContext.Provider>
-  );
+    useEffect(() => {
+        if(inputCss === '') setInputCss(initialInputCss);
+
+        switch (outputType) {
+            case 'JSS':
+                setOutputCss(toJSS(inputCss));
+                break;
+            case 'React Native':
+                setOutputCss(toRN(inputCss));
+                break;
+            default:
+                setOutputCss('Unknown output type');
+        }
+    }, [inputCss, outputType, setOutputCss]);
+
+    return (
+        <Context.Provider value={{
+            outputType,
+            inputCss,
+            outputCss,
+            outputTypeChanged: setOutputType,
+            inputCssChanged: setInputCss
+        }}>
+            <div className="wrapper">
+                <Header/>
+                <Title/>
+                <Transform/>
+            </div>
+        </Context.Provider>
+    );
 }
 
 export default App;

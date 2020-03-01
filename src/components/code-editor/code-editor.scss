@@ -1,5 +1,4 @@
-#input,
-#output {
+.code {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -17,4 +16,13 @@
 	height: 65vh;
 	overflow: scroll;
 	tab-size: 4;
+}
+
+.code--input {
+	background: #ECF2F5;
+	border-right: 2px solid #AAA;
+}
+
+.code--output {
+	background: #E0EBF5;
 }

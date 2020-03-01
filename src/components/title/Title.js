@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
 
-import '../assets/css/title.scss';
-import { AppContext } from '../context/AppContext';
+import './title.scss';
+import { Context } from "../../App";
 
 const Title = () => {
-  const { type } = useContext(AppContext);
+    const { outputType } = useContext(Context);
   return (
     <table>
+        <tbody>
       <tr>
         <th style={{width: '45%'}}>CSS</th>
         <th style={{width: '10%', fontSize: '22px'}}>&#8594;</th>
-        <th style={{width: '45%'}}>{type}</th>
+        <th style={{width: '45%'}}>{ outputType }</th>
       </tr>
+        </tbody>
     </table>
   );
 };
