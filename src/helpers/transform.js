@@ -2,7 +2,7 @@ import postcss from 'postcss';
 import postcssJs from 'postcss-js';
 import transform from 'css-to-react-native';
 
-export const toJSSObject = (cssText) => {
+const toJSSObject = (cssText) => {
     const root = postcss.parse(cssText);
     return postcssJs.objectify(root);
 };
