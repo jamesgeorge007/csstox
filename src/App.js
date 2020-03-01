@@ -17,6 +17,8 @@ function App() {
     const [outputCss, setOutputCss] = useState('');
 
     useEffect(() => {
+        if(inputCss === '') setInputCss(initialInputCss);
+
         switch (outputType) {
             case 'JSS':
                 setOutputCss(toJSS(inputCss));
