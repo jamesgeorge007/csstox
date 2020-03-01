@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import './select.scss';
-import {Context} from "../../App";
+import { Context } from "../../App";
 
 const SelectBox = () => {
     const { outputTypeChanged } = useContext(Context);
