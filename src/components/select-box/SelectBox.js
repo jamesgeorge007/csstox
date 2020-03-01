@@ -8,8 +8,8 @@ const SelectBox = () => {
 
   return (
     <select className="select" onChange={ (e) => outputTypeChanged(e.target.value) }>
-      <option value={"JSS"}>JSS</option>
-      <option value={"React Native"}>React Native</option>
+        <option value={ "React Native" }>React Native</option>
+        <option value={ "JSS" }>JSS</option>
     </select>
   );
 };

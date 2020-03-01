@@ -18,7 +18,7 @@ const Transform = () => {
                 placeholder={ inputCss }
                 initialValue={ '' }
                 valueChanged={ inputCssChanged }
-                readOnly={false}
+                readOnly={ false }
                 type={ 'input' }
             />
           </td>
@@ -26,7 +26,7 @@ const Transform = () => {
             <CodeEditor
                 type={ 'output' }
                 initialValue={ outputCss }
-                readOnly={true}
+                readOnly={ true }
             />
           </td>
         </tr>

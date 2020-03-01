@@ -12,7 +12,7 @@ const initialInputCss = `font-size: 18px;\nline-height: 24px;\ncolor: red;`;
 export const Context = React.createContext(null);
 
 function App() {
-    const [outputType, setOutputType] = useState('JSS');
+    const [outputType, setOutputType] = useState('React Native');
     const [inputCss, setInputCss] = useState(initialInputCss);
     const [outputCss, setOutputCss] = useState('');
 
