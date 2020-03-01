@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import './title.scss';
-import {Context} from "../../App";
+import { Context } from "../../App";
 
 const Title = () => {
     const { outputType } = useContext(Context);
