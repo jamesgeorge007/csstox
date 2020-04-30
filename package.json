@@ -14,6 +14,16 @@
     "react-dom": "^16.12.0",
     "react-scripts": "^3.4.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+ "lint-staged": {
+   "src/**/*.{js,css,scss,md}": [
+     "prettier --write"
+   ]
+ },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
