@@ -1,27 +1,27 @@
 .code {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 
-	white-space: pre;
-	width: 100%;
-	display: block;
-	padding: 3%;
-	font: 14px/1.5em 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+  white-space: pre;
+  width: 100%;
+  display: block;
+  padding: 3%;
+  font: 14px/1.5em "Consolas", "Menlo", "Monaco", "Courier New", monospace;
   font-weight: 550;
   outline: none;
-	border: none;
-	resize: none;
-	height: 65vh;
-	overflow: scroll;
-	tab-size: 4;
+  border: none;
+  resize: none;
+  height: 65vh;
+  overflow: scroll;
+  tab-size: 4;
 }
 
 .code--input {
-	background: #ECF2F5;
+  background: #ecf2f5;
 }
 
 .code--output {
-	background: #E0EBF5;
+  background: #e0ebf5;
 }
