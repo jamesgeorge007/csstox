@@ -30,4 +30,12 @@ describe("behavior", () => {
     };
     cy.visit("/").get('select').select('JSS').get(".code--input").type(inputCSSRule).get(".code--output").should("have.value", JSON.stringify(result, null, 2));
   });
+
+  it('shows an error message for invalid CSS snippet', () => {
+    const inputCSSRule = 'margin: 5';
+    const result = `Error translating CSS`
+    cy.visit("/").get('.code--input').type(inputCSSRule).get(".code--output").should((el) => {
+      expect(el).to.contain(result);
+    });
+  });
 });
