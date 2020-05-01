@@ -31,7 +31,7 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test :3000 cy:run",
     "eject": "react-scripts eject",
-    "format": "prettier --write src/**/*.{js,css,scss} *.md",
+    "format": "prettier --write tests/**/*.js src/**/*.{js,css,scss} *.md",
     "predeploy": "npm run build",
     "deploy": "surge --project ./build --domain https://csstox.surge.sh"
   },
