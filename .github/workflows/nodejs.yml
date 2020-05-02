@@ -26,4 +26,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn
     - run: yarn run build
+    - run: yarn run format
     - run: yarn run test:e2e
