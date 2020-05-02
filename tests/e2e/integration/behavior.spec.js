@@ -48,4 +48,17 @@ describe("behavior", () => {
         expect(el).to.contain(result);
       });
   });
+
+  it("generates the React Native equivalent of default CSS rule available as placeholder", () => {
+    const result = {
+      fontSize: 18,
+      lineHeight: 24,
+      color: "red",
+    };
+    cy.visit("/")
+      .get(".code--output")
+      .should((el) => {
+        expect(el).to.contain.text(JSON.stringify(result, null, 2));
+      });
+  });
 });
