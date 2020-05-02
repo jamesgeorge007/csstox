@@ -61,4 +61,19 @@ describe("behavior", () => {
         expect(el).to.contain.text(JSON.stringify(result, null, 2));
       });
   });
+
+  it("generates the JSS equivalent of default CSS rule available as placeholder", () => {
+    const result = {
+      fontSize: "18px",
+      lineHeight: "24px",
+      color: "red",
+    };
+    cy.visit("/")
+      .get(".select")
+      .select("JSS")
+      .get(".code--output")
+      .should((el) => {
+        expect(el).to.contain.text(JSON.stringify(result, null, 2));
+      });
+  });
 });
