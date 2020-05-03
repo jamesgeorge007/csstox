@@ -1,15 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import './select.scss';
+import "./select.scss";
 import { Context } from "../../App";
 
 const SelectBox = () => {
-    const { outputTypeChanged } = useContext(Context);
+  const { outputTypeChanged } = useContext(Context);
 
   return (
-    <select className="select" onChange={ (e) => outputTypeChanged(e.target.value) }>
-        <option value={ "React Native" }>React Native</option>
-        <option value={ "JSS" }>JSS</option>
+    <select
+      className="select"
+      data-testid="selectbox"
+      onChange={(e) => outputTypeChanged(e.target.value)}
+    >
+      <option value="React Native">React Native</option>
+      <option value="JSS">JSS</option>
     </select>
   );
 };
