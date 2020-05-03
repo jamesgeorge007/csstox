@@ -4,6 +4,8 @@ describe("basic workflow", () => {
   });
 
   it("expects to find the select box defaulting to React Native", () => {
-    cy.visit("/").get(".select").should("have.value", "React Native");
+    cy.visit("/")
+      .get("[data-testid=selectbox]")
+      .should("have.value", "React Native");
   });
 });
