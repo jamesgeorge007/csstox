@@ -29,7 +29,7 @@ test("should pass right parameters to child components", () => {
     </Context.Provider>
   );
 
-  const firstCodeEditor = getAllByTestId("code-editor")[0];
+  const [firstCodeEditor, secondCodeEditor] = getAllByTestId("code-editor");
 
   expect(firstCodeEditor).toHaveAttribute(
     "data-placeholder",
@@ -39,7 +39,6 @@ test("should pass right parameters to child components", () => {
   expect(firstCodeEditor).toHaveAttribute("data-type", "input");
   expect(firstCodeEditor).not.toHaveAttribute("readOnly");
 
-  const secondCodeEditor = getAllByTestId("code-editor")[1];
   expect(secondCodeEditor).not.toHaveAttribute("data-placeholder");
   expect(secondCodeEditor).toHaveAttribute("data-initial-value", "output css");
   expect(secondCodeEditor).toHaveAttribute("data-type", "output");

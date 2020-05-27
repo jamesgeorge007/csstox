@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { Context } from "../../App";
 import SelectBox from "./SelectBox";
 
-test("should call the callback when value changes", async () => {
+test("should invoke the callback when value changes", async () => {
   const outputTypeChanged = jest.fn();
   const contextValue = { outputTypeChanged };
 

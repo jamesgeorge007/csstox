@@ -45,7 +45,7 @@ describe("Code Editor", () => {
     expect(screen.getByTestId("test-id")).not.toHaveAttribute("readOnly");
   });
 
-  test("should call the callback when input changes", async () => {
+  test("should invoke the callback when input changes", async () => {
     const callback = jest.fn();
 
     render(<CodeEditor valueChanged={callback} dataTestId={"test-id"} />);
