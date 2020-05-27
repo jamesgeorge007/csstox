@@ -11,7 +11,7 @@ export const toJSS = (cssText) => {
   try {
     return JSON.stringify(toJSSObject(cssText), null, 2);
   } catch (e) {
-    return "Error translating CSS";
+    return "Error translating CSS to JSS";
   }
 };
 
@@ -21,6 +21,6 @@ export const toRN = (cssText) => {
     const result = Object.keys(output).map((rules) => [rules, output[rules]]);
     return JSON.stringify(transform(result), null, 2);
   } catch (e) {
-    return "Error translating CSS";
+    return "Error translating CSS to RN";
   }
 };
