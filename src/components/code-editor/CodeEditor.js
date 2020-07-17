@@ -20,17 +20,31 @@ const CodeEditor = (props) => {
     valueChanged(value);
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(value).then(
+      function () {
+        console.log("Written to the clipboard");
+      },
+      function () {
+        console.log("Writing to the clipboard failed");
+      }
+    );
+  };
+
   const className = type === "input" ? "code code--input" : "code code--output";
 
   return (
-    <textarea
-      className={className}
-      value={value}
-      readOnly={readOnly}
-      placeholder={placeholder}
-      onChange={(e) => handleChange(e.target.value)}
-      data-testid={dataTestId}
-    />
+    <div>
+      <textarea
+        className={className}
+        value={value}
+        readOnly={readOnly}
+        placeholder={placeholder}
+        onChange={(e) => handleChange(e.target.value)}
+        data-testid={dataTestId}
+      />
+      <button onClick={copyToClipboard}>Copy to clipboard</button>
+    </div>
   );
 };
 

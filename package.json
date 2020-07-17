@@ -33,7 +33,9 @@
     "eject": "react-scripts eject",
     "format": "prettier --write tests/**/*.js src/**/*.{js,css,scss} *.md",
     "predeploy": "npm run build",
-    "deploy": "surge --project ./build --domain https://csstox.surge.sh"
+    "deploy": "surge --project ./build --domain https://csstox.surge.sh",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,6 +53,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.3",
+    "@storybook/react": "^5.3.19",
     "cypress": "^4.5.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.1",
