@@ -1,27 +1,14 @@
-.code {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
+.editor {
+  display: flex;
+  flex-direction: column;
 
-  white-space: pre;
-  width: 100%;
-  display: block;
-  padding: 3%;
-  font: 14px/1.5em "Consolas", "Menlo", "Monaco", "Courier New", monospace;
-  font-weight: 550;
-  outline: none;
-  border: none;
-  resize: none;
-  height: 65vh;
-  overflow: scroll;
-  tab-size: 4;
+  .editor_title {
+    padding: 15px;
+    border: 1px solid rgb(228, 231, 235);
+    text-align: left;
+    color: #375eab;
+    font-size: 20px;
+  }
 }
 
-.code--input {
-  background: #ecf2f5;
-}
-
-.code--output {
-  background: #e0ebf5;
-}
+//background: #375eab;

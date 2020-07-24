@@ -6,7 +6,10 @@ import CodeEditor from "../code-editor/CodeEditor";
 import { Context } from "../../App";
 
 const Transform = () => {
-  const { inputCss, outputCss, inputCssChanged } = useContext(Context);
+  const { outputType, inputCss, outputCss, inputCssChanged } = useContext(
+    Context
+  );
+  const outputSyntaxMode = outputType === "JSX" ? "css" : "javascript";
 
   return (
     <table>
@@ -16,9 +19,11 @@ const Transform = () => {
             <CodeEditor
               placeholder={inputCss}
               initialValue=""
+              syntaxMode="css"
               valueChanged={inputCssChanged}
               readOnly={false}
               type="input"
+              title="CSS"
               dataTestId="input"
             />
           </td>
@@ -26,7 +31,9 @@ const Transform = () => {
             <CodeEditor
               type="output"
               initialValue={outputCss}
+              syntaxMode={outputSyntaxMode}
               readOnly={true}
+              title={outputType}
               dataTestId="output"
             />
           </td>

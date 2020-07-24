@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import AceEditor from "react-ace";
 
 import "./code-editor.scss";
+import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/mode-css";
+import "ace-builds/src-noconflict/theme-github";
 
 const CodeEditor = (props) => {
   const {
@@ -9,6 +13,8 @@ const CodeEditor = (props) => {
     valueChanged,
     readOnly,
     type,
+    title,
+    syntaxMode,
     dataTestId,
   } = props;
   const [value, setValue] = useState(initialValue);
@@ -31,19 +37,22 @@ const CodeEditor = (props) => {
     );
   };
 
-  const className = type === "input" ? "code code--input" : "code code--output";
+  const uniqueId = type === "input" ? "code--input" : "code--output";
 
   return (
-    <div>
-      <textarea
-        className={className}
+    <div className={"editor"} data-testid={dataTestId}>
+      <div className={"editor_title"}>
+        <h2>{title}</h2>
+      </div>
+      <AceEditor
+        mode={syntaxMode}
+        theme="github"
+        placeholder={placeholder}
+        onChange={handleChange}
         value={value}
         readOnly={readOnly}
-        placeholder={placeholder}
-        onChange={(e) => handleChange(e.target.value)}
-        data-testid={dataTestId}
+        name={uniqueId}
       />
-      <button onClick={copyToClipboard}>Copy to clipboard</button>
     </div>
   );
 };

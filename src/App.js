@@ -45,7 +45,6 @@ function App() {
     >
       <div className="wrapper">
         <Header />
-        <Title />
         <Transform />
       </div>
     </Context.Provider>
