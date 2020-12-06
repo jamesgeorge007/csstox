@@ -17,4 +17,4 @@ Please try it out [here](https://csstox.surge.sh/)
 
 <br />
 
-> A web solution for [css-to-react-native](https://github.com/styled-components/css-to-react-native)
+> A playground for [css-to-react-native](https://github.com/styled-components/css-to-react-native)
