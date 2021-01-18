@@ -2,12 +2,12 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 
 import Title from "./Title";
-import { Context } from "../../App";
+import { Context } from "../../AppContext";
 
 test("should show the output type", () => {
-  const contextValue = { outputType: "JSS" };
+  const value = { outputType: "JSS" };
   render(
-    <Context.Provider value={contextValue}>
+    <Context.Provider value={value}>
       <Title />
     </Context.Provider>
   );

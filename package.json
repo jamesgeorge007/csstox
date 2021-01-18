@@ -27,8 +27,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "yarn test:unit && yarn test:e2e",
     "cy:run": "cypress run",
+    "test:unit": "react-scripts test",
     "test:e2e": "start-server-and-test :3000 cy:run",
     "eject": "react-scripts eject",
     "format:check": "prettier --check tests/**/*.js src/**/*.{js,css,scss} *.md",

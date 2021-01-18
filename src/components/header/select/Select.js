@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
+
+// Custom hook to consume the global state
+import { useOutputType } from "../../../AppContext";
 
 import "./select.scss";
-import { Context } from "../../../App";
 
 const SelectBox = () => {
-  const { setOutputType } = useContext(Context);
+  const { setOutputType } = useOutputType();
 
   return (
     <select

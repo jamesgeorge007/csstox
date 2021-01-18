@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
+
+// Custom hook to consume the global context
+import { useOutputType } from "../../AppContext";
 
 import "./title.scss";
-import { Context } from "../../App";
 
 const Title = () => {
-  const { outputType } = useContext(Context);
+  const { outputType } = useOutputType();
   return (
     <table>
       <tbody>

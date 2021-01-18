@@ -2,9 +2,7 @@ import React from "react";
 
 import "./input.scss";
 
-const Input = (props) => {
-  const { placeholder, setInputValue } = props;
-
+const Input = ({ placeholder, setInputValue }) => {
   return (
     <textarea
       className={"code code--input"}

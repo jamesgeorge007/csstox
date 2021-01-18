@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./output.scss";
 
-const Output = (props) => {
-  const { value } = props;
-
+const Output = ({ value }) => {
   const [outputValue, setOutputValue] = useState(value);
 
   useEffect(() => setOutputValue(value), [value]);

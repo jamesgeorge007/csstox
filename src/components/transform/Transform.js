@@ -1,15 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { Context } from "../../App";
 import { toJSS, toRN } from "../../helpers/transform";
+
+// Custom hook to consume the global state
+import { useOutputType } from "../../AppContext";
 
 import "./transform.scss";
 import Input from "./input/Input";
 import Output from "./output/Output";
 
 const Transform = () => {
-  // Global context
-  const { outputType } = useContext(Context);
+  // Global state
+  const { outputType } = useOutputType();
 
   // Local state
   const initialInputValue = `font-size: 18px;\nline-height: 24px;\ncolor: red;`;

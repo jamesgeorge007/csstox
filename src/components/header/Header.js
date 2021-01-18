@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
+
+// Custom hook to consume the global state
+import { useOutputType } from "../../AppContext";
 
 import "./header.scss";
 import Select from "./select/Select";
-import { Context } from "../../App";
 
 const Header = () => {
-  const { outputType } = useContext(Context);
+  const { outputType } = useOutputType();
 
   return (
     <header>

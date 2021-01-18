@@ -1,16 +1,16 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import { Context } from "../../App";
+import AppContext from "../../AppContext";
 import Transform from "./Transform";
 
 test("should pass right parameters to child components", () => {
   const initialInput = `font-size: 18px;\nline-height: 24px;\ncolor: red;`;
 
   const { getByTestId } = render(
-    <Context.Provider value={{ outputType: "React Native" }}>
+    <AppContext>
       <Transform />
-    </Context.Provider>
+    </AppContext>
   );
 
   const inputTextArea = getByTestId("input");

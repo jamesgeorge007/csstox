@@ -1,29 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./assets/css/global.css";
 
+import AppContext from "./AppContext";
 import Header from "./components/header/Header";
 import Title from "./components/title/Title";
 import Transform from "./components/transform/Transform";
 
-export const Context = React.createContext(null);
-
 function App() {
-  const [outputType, setOutputType] = useState("React Native");
-
   return (
-    <Context.Provider
-      value={{
-        outputType,
-        setOutputType,
-      }}
-    >
+    <AppContext>
       <div className="wrapper">
         <Header />
         <Title />
         <Transform />
       </div>
-    </Context.Provider>
+    </AppContext>
   );
 }
 
