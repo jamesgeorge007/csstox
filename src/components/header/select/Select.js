@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 
 import "./select.scss";
-import { Context } from "../../App";
+import { Context } from "../../../App";
 
 const SelectBox = () => {
-  const { outputTypeChanged } = useContext(Context);
+  const { setOutputType } = useContext(Context);
 
   return (
     <select
       className="select"
-      data-testid="selectbox"
-      onChange={(e) => outputTypeChanged(e.target.value)}
+      data-testid="select"
+      onChange={({ target }) => setOutputType(target.value)}
     >
       <option value="React Native">React Native</option>
       <option value="JSS">JSS</option>
