@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
+
+// Custom hook to consume the global state
+import { useOutputType } from "../../AppContext";
 
 import "./header.scss";
-import SelectBox from "../select-box/SelectBox";
-import { Context } from "../../App";
+import Select from "./select/Select";
 
 const Header = () => {
-  const { outputType } = useContext(Context);
+  const { outputType } = useOutputType();
 
   return (
     <header>
@@ -13,7 +15,7 @@ const Header = () => {
         <div>
           <h1>
             CSS to &nbsp;
-            <SelectBox />
+            <Select />
           </h1>
           <br />
         </div>

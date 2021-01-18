@@ -29,7 +29,7 @@ describe("behavior", () => {
       margin: "5px 7px 2px",
     };
     cy.visit("/")
-      .get("[data-testid=selectbox]")
+      .get("[data-testid=select]")
       .select("JSS")
       .get("[data-testid=input]")
       .type(inputCSSRule)
@@ -69,7 +69,7 @@ describe("behavior", () => {
       color: "red",
     };
     cy.visit("/")
-      .get("[data-testid=selectbox]")
+      .get("[data-testid=select]")
       .select("JSS")
       .get("[data-testid=output]")
       .should((el) => {

@@ -1,13 +1,13 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
-import { Context } from "../../App";
+import { Context } from "../../AppContext";
 import Header from "./Header";
 
 test("should show the message with proper output type", () => {
-  const contextValue = { outputType: "JSS" };
+  const value = { outputType: "JSS" };
   render(
-    <Context.Provider value={contextValue}>
+    <Context.Provider value={value}>
       <Header />
     </Context.Provider>
   );

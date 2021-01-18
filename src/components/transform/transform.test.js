@@ -1,46 +1,24 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-jest.mock("../code-editor/CodeEditor", () => (props) => {
-  return (
-    <textarea
-      data-testid="code-editor"
-      data-initial-value={props.initialValue}
-      data-placeholder={props.placeholder}
-      data-type={props.type}
-      readOnly={props.readOnly}
-    />
-  );
-});
-
+import AppContext from "../../AppContext";
 import Transform from "./Transform";
-import { Context } from "../../App";
 
 test("should pass right parameters to child components", () => {
-  const contextValue = {
-    inputCss: "input css",
-    outputCss: "output css",
-    inputCssChanged: jest.fn(),
-  };
+  const initialInput = `font-size: 18px;\nline-height: 24px;\ncolor: red;`;
 
-  const { getAllByTestId } = render(
-    <Context.Provider value={contextValue}>
+  const { getByTestId } = render(
+    <AppContext>
       <Transform />
-    </Context.Provider>
+    </AppContext>
   );
 
-  const [firstCodeEditor, secondCodeEditor] = getAllByTestId("code-editor");
+  const inputTextArea = getByTestId("input");
+  const outputTextArea = getByTestId("output");
 
-  expect(firstCodeEditor).toHaveAttribute(
-    "data-placeholder",
-    contextValue.inputCss
-  );
-  expect(firstCodeEditor).toHaveAttribute("data-initial-value", "");
-  expect(firstCodeEditor).toHaveAttribute("data-type", "input");
-  expect(firstCodeEditor).not.toHaveAttribute("readOnly");
+  expect(inputTextArea).toHaveAttribute("placeholder", initialInput);
+  expect(inputTextArea).not.toHaveAttribute("readOnly");
 
-  expect(secondCodeEditor).not.toHaveAttribute("data-placeholder");
-  expect(secondCodeEditor).toHaveAttribute("data-initial-value", "output css");
-  expect(secondCodeEditor).toHaveAttribute("data-type", "output");
-  expect(secondCodeEditor).toHaveAttribute("readOnly");
+  expect(outputTextArea).not.toHaveAttribute("placeholder");
+  expect(outputTextArea).toHaveAttribute("readOnly");
 });
